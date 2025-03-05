@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download stuff</title>
+    <title>Toggle Sections</title>
     <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .content { display: none; margin-top: 20px; padding: 20px; border: 1px solid #ccc; }
+        button { margin: 10px; padding: 10px; cursor: pointer; }
+    </style>
+	
+	<style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -36,14 +42,19 @@
     </style>
 </head>
 <body>
-    <h1>Java Files</h1>
-    <ul class="item-list">
+    <h1>MiniMinusMan's Random Stuff</h1>
+	<h4>(could help you when searching in the future!)</h4>
+    <button onclick="showSection('java')">Java Files</button>
+    <button onclick="showSection('roblox')">Roblox Scripts</button>
+    
+    <div id="java" class="content"> 
+        <h2>Java Files</h2>
         <li><a href="https://github.com/MiniMinusMan-Official/main/releases/download/Java-File/The.Broken.Script.1.20.1.zip" download>The Broken Script (1.8 + 1.9 with dependencies)</a></li>
-    </ul>
-  
-    <h1>Script Files [roblox]</h1>
-    <ul class="item-list">
-        <li><a href="https://github.com/MiniMinusMan-Official/main/releases/download/Roblox-Scripts/aimbotesp.lua" download>Aimbot + Esp script</a></li>
+    </div>
+    
+    <div id="roblox" class="content"> 
+        <h2>Roblox Scripts</h2>
+                <li><a href="https://github.com/MiniMinusMan-Official/main/releases/download/Roblox-Scripts/aimbotesp.lua" download>Aimbot + Esp script</a></li>
         <li><a href="https://github.com/MiniMinusMan-Official/main/releases/download/Roblox-Scripts/airhub.lua" download>AirHub</a></li>
         <li><a href="https://github.com/MiniMinusMan-Official/main/releases/download/Roblox-Scripts/aisploit.4.bedwarz.lua" download>Ai-Sploit for Bedwars</a></li>
         <li><a href="https://github.com/MiniMinusMan-Official/main/releases/download/Roblox-Scripts/Energize.2.AutoExec.lua" download>Energize 2 (Automatically executes)</a></li>
@@ -63,7 +74,6 @@
         <li><a href="https://github.com/MiniMinusMan-Official/main/releases/download/Roblox-Scripts/Raven.B4.Rewrite.lua" download>Raven B4 Rewrite (might not work, lmk if it doesnt)</a></li>
         <li><a href="https://github.com/MiniMinusMan-Official/main/releases/download/Roblox-Scripts/Reach.Script.lua" download>Reach script (for swords)</a></li>
         <li><a href="https://github.com/MiniMinusMan-Official/main/releases/download/Roblox-Scripts/save.lua" download>Getting Over It [Remastered] 0 gravity script</a></li>
-        
         <li><a href="https://github.com/MiniMinusMan-Official/main/releases/download/Roblox-Scripts/scp096.script.R6.lua" download>SCP-096 Script (r6)</a></li>
         <li><a href="https://github.com/MiniMinusMan-Official/main/releases/download/Roblox-Scripts/solarisCB.lua" download>The best Counter-Blox script [free]</a></li>
         <li><a href="https://github.com/MiniMinusMan-Official/main/releases/download/Roblox-Scripts/UNC.Test.lua" download>Plain UNC test</a></li>
@@ -71,6 +81,14 @@
         <li><a href="https://github.com/MiniMinusMan-Official/main/releases/download/Roblox-Scripts/voidwarevape.lua" download>Old VoidWare-Vape (still maintained)</a></li>
         <li><a href="https://github.com/MiniMinusMan-Official/main/releases/download/Roblox-Scripts/VR.good.lua" download>R6/R15 VR script (works without headset and doesnt work in most games)</a></li>
         <li><a href="https://github.com/MiniMinusMan-Official/main/releases/download/Roblox-Scripts/VR.lua" download>Worse VR script that works in all R6 games</a></li>
-    </ul>-
+    </div>
+    
+    <script>
+        function showSection(sectionId) {
+            document.getElementById('java').style.display = 'none';
+            document.getElementById('roblox').style.display = 'none';
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
